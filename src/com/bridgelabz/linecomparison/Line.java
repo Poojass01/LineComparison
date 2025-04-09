@@ -20,4 +20,20 @@ class Point {
         this.x = x;
         this.y = y;
     }
+    
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (!(obj instanceof Line)) return false;
+        Line other = (Line) obj;
+        return Double.compare(this.length(), other.length()) == 0;
+    }
+
+	private double length() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }
+
+
